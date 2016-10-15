@@ -4,10 +4,10 @@ import csv
 import sys
 
 ''' Go to https://apps.twitter.com/ to register your app to get your api keys '''
-CONSUMER_KEY = 'a2bLpVe5RKCp3miLncRSJj4uv'
-CONSUMER_SECRET = 'eokqscaZnUuulyHPbhT4HUdfikiWARV9yOiyp1K5BVw5anDeHR'
-ACCESS_KEY = '1395752780-GVCvpoVgCmyrhLKknaIyICwH9bDETpUem2JQ9HC'
-ACCESS_SECRET = '3kn6YVXULEy5HGsG7EuwcROuIWKH2fUeSMOiQ6f3l4o4z'
+CONSUMER_KEY = 'ZBxlzgXKatHdHRyhjapkzrCwn'
+CONSUMER_SECRET = 'EpK11g1aQ3uHPZAhfkDSX0tPfGAvgiqgpBBXSD63cjC3AovFQO'
+ACCESS_KEY = '112619837-oYa5yIMFeuA3VvNRudFQDdyuavB4PX8OPkvAvhgj'
+ACCESS_SECRET = 'VIUxuIhltjeeZOPez8b9U3L5WQDIBJWMwFIlfNECRyCUj'
 
 twitter = Twython(CONSUMER_KEY,CONSUMER_SECRET,ACCESS_KEY,ACCESS_SECRET)
 
@@ -32,12 +32,15 @@ for i in range(0, 16): ## iterate through all tweets
 			lis.append(tweet['id'])
 	finally:
 		f.close()
-	if calls == 5:
-		time.sleep(300)
-		calls = 0
-	else:
-		calls += 1
-		
+	# if calls == 5:
+	print "==================sleeping=================="
+	time.sleep(300)
+	print "==================done sleeping=================="
+
+		# calls = 0
+	# else:
+		# calls += 1
+
 
 
     # for tweet in user_timeline:
